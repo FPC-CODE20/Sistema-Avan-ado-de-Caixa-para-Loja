@@ -1,0 +1,43 @@
+Como Implementar Todo o Sistema
+Pré-requisitos:
+
+Python 3.8+
+
+PostgreSQL
+
+Node.js (para o frontend)
+
+Docker (opcional para facilitar a implantação)
+
+Passos para instalação:
+
+# Backend (Django)
+git clone https://github.com/seu-repositorio/loja-caixa.git
+cd loja-caixa/backend
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# venv\Scripts\activate  # Windows
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py createsuperuser
+
+# Frontend (Vue.js)
+cd ../frontend
+npm install
+npm run build
+
+Configuração do Ambiente:
+
+Criar arquivo .env no diretório backend com as configurações de banco de dados
+
+Configurar impressoras no sistema operacional
+
+Configurar credenciais AWS para backup (opcional)
+
+# Iniciar backend
+cd backend
+python manage.py runserver
+
+# Iniciar frontend (em outro terminal)
+cd ../frontend
+npm run serve
